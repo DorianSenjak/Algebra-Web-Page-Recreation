@@ -9,21 +9,20 @@
     <link rel="script" href="Scripts/jquery-1.11.3.min.js">
     <link rel="stylesheet" href = "bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Resources/Icons/font/flaticon.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="Styles/style.css">
     <script src="Scripts/jquery-1.11.3.min.js"></script>
     <script src="bootstrap/bootstrap.js"></script>
 </head>
 <body>
-<div class="main" id="indexMain">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse" id="navbarNav">
         <ul class="navbar-nav grid column-gap-5">
           <li class="nav-item"><a class="nav-link" href="prijava.html"><i class="flaticon-arrow"></i>Prijavi se</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html"><i class="flaticon-home"></i> Početna</a></li>
+          <li class="nav-item"><a class="nav-link" href="pocetna.html"><i class="flaticon-home"></i> Početna</a></li>
           <li class="nav-item"><a class="nav-link" href="oNama.html"><i class="flaticon-chat"></i> O nama</a></li>
           <li class="nav-item"><a class="nav-link" href="novosti.html"><i class="flaticon-info"></i> Novosti</a></li>
           <li class="nav-item"><a class="nav-link" href="nastavniPlan.html"><i class="flaticon-info"></i> Nastavni plan</a></li>
@@ -83,17 +82,26 @@
       </div>
     </nav>
   </header>
-  <section class="content" id="indexContent">
-    <div class="uvodnaRijec">
-        <p id="p1"> </p>
-    </div>
-    <div class="uvodnaRijec" id="uR2">
-        <p id="p2"> <span id="p2Span"></span></p>
-    </div>
-    <div id="indexVideo">
-        <video autoplay loop src="Resources/video/typingOnlaptop.mp4" muted></video>
-    </div>
+  <section>
+    <section>
+      <video autoplay loop muted>
+          <source src="Resources/video/typingOnlaptop.mp4">
+      </video>
+      <div class="typewriter overlay">
+          <h1 class="float" id="textVideo">
+              <div class="text-white">
+                Budi izvrstan u onom što voliš
+              </div>
+          </h1>
+      </div>
   </section>
-</div>
+  <section>
+      <footer class="text-white text-center">
+        <h3>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</h3>
+        <div class="text-danger">
+          <h3>ZAISKRI</h3>
+      </footer>
+  </section>
+</section>
 </body>
 </html>

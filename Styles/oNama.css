@@ -1,0 +1,186 @@
+a{
+    text-decoration: none;
+}
+
+i{
+    display: inline-block;
+    color: orange;
+    justify-content: center;
+    font-weight: normal;
+}
+h2 > i {
+    color:darkblue
+}
+.flaticon-arrow{
+    color:blue;
+}
+
+.nav-item > a:hover{
+    color: rgb(238, 255, 89);
+}
+
+.navbar {
+    height: 80px;
+    line-height: 80px;
+}
+
+#kontaktLink:hover{
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #fff;
+    background-size: cover;
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    margin-top: auto;
+    text-shadow: 0.5px 0.5px black;
+    background-image: url(../Resources/img/zaiskri-bg.jpg);
+    background-size:cover;
+}
+
+
+
+.oNamaTab > a {
+    text-decoration: none;
+    color: orange;
+}
+
+.oNamaTab > a:hover {
+    color: yellow;
+}
+
+#oNamaTabs{
+    position:absolute;
+    right: -1000px;
+    background: balck;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.6s forwards;
+    animation-delay:1s;
+    line-height: 0px;
+}
+
+#oNamaContent {
+    display:flex;
+    background-position: center center;
+    height: 250px;
+    background-image: url(../Resources/img/kampus-iz-zraka-min-1.jpg);
+	animation: 0.75s ease-in 0s 1 slideInFromTop;
+}
+
+.nasloviStranica{
+    text-align: center;    
+    justify-self: center;
+    animation: normal 1s naslovUp;
+    
+}
+
+.nasloviStranica > h1{
+    margin-bottom: 0.5em;
+}
+
+.nasloviStranica > hr{
+    position:relative;
+    left:25%;
+    color: rgb(214, 139, 0);
+    border: solid rgb(214, 139, 0) 1.5px;
+    fill: rgb(214, 139, 0);
+    width: 60em;
+}
+
+#naseVrijednostiNaslov{
+    text-align: center;
+    justify-self: center;
+    color: purple;
+    margin-bottom: 5%;
+}
+
+.flaticon-thunderbolt{
+    color: purple;
+}
+.flaticon-time{
+    color:purple;
+}
+
+#oNamaTekst > p{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    max-width: 50%
+}
+
+.box{
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    max-width: 30%;
+}
+
+.box > h3{
+    padding-left: 1em;
+    padding-top:1em;
+    font-weight: lighter;
+}
+
+.box > hr{
+    border: 0.5px solid #ffb700;
+}
+
+.box > p{
+    display:block;
+    padding-left: 1em;
+    padding-right: 1em;
+    min-height: 15em;
+}
+
+#oNamaBoxes{
+    justify-content: center;
+    margin-top: 5%;
+    gap: 0.5em;
+    margin-bottom: 5%;
+    
+}
+
+#povijestBoxes{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 0.5em;
+    margin-bottom: 5%;
+}
+
+#povijestBoxes > .box > h3 > span{
+    color: rgb(68, 72, 201);
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes slide {
+    100% { right: 0; }
+}
+
+@keyframes naslovUp {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform : translateY(0);
+    }
+}
