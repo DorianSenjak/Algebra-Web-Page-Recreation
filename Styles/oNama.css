@@ -110,6 +110,10 @@ footer{
     color:purple;
 }
 
+.flaticon-group{
+    color:purple;
+}
+
 #oNamaTekst > p{
     margin-top: 3em;
     margin-bottom: 3em;
@@ -147,6 +151,28 @@ footer{
     gap: 0.5em;
     margin-bottom: 5%;
     
+}
+
+#AlgebraGrupaBoxes{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 0.5em;
+    margin-bottom: 5%;
+}
+
+.smallBox{
+    max-width: 75%;
+}
+
+.smallBox > h3{
+    font-size: 125%;
+}
+
+.resize{
+    height: auto;
+    max-width: 125px;
 }
 
 #povijestBoxes{
