@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto+Condensed&display=swap" rel="stylesheet">
+    <title>SUPIT</title>
+    <link rel="script" href="Scripts/jquery-1.11.3.min.js">
+    <link rel="stylesheet" href = "bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="Resources/Icons/font/flaticon.css">
+    <link rel="stylesheet" href="Styles/novosti.css">
+    <script src="Scripts/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav grid column-gap-5">
+              <li class="nav-item"><a class="nav-link" href="prijava.html"><i class="flaticon-arrow"></i>Prijavi se</a></li>
+              <li class="nav-item"><a class="nav-link" href="pocetna.html"><i class="flaticon-home"></i> Početna</a></li>
+              <li class="nav-item"><a class="nav-link" href="oNama.html"><i class="flaticon-chat"></i> O nama</a></li>
+              <li class="nav-item"><a class="nav-link" href="novosti.html"><i class="flaticon-info"></i> Novosti</a></li>
+              <li class="nav-item"><a class="nav-link" href="nastavniPlan.html"><i class="flaticon-info"></i> Nastavni plan</a></li>
+              <li class="nav-item" data-bs-target="modal"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal" id="kontaktLink"><i class="flaticon-mail"></i> Kontakt </a></li>
+            </li>
+            </ul>
+          </div>
+          <div class="modal fade" id="modal" aria-labelledby="kontaktModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="kontaktModalLabel"><i class="flaticon-mail"></i> Kontaktirajte nas</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div>
+                      <label for="ime" class="form-label"><b>Ime i prezime</b></label>
+                      <input type="text" class="form-control" id="ime" placeholder="Unesite ime i prezime">
+                    </div>
+                    <div>
+                      <label for="email" class="form-label"><b>Email adresa</b></label>
+                      <input type="email" class="form-control" id="email" placeholder="Unesite email adresu">
+                    </div>
+                    <div>
+                      <label for="vaznostPoruke"><b>Važnost poruke</b></label>
+                      <select class="form-select">
+                        <option>Niska</option>
+                        <option>Srednja</option>
+                        <option>Visoka</option>
+                      </select>
+                    </div>                
+                    <div>
+                      <label for="poruka" class="form-label"><b>Poruka</b></label>
+                      <textarea class="form-control" id="poruka" rows="3" placeholder="Unesite poruku"></textarea>
+                    </div>
+                    <div class="form-check form-switch">
+                      <div class="container text-center">
+                        <div class="row row-cols-auto align-items-center">
+                          <div class="col">
+                            <input type="checkbox" class="form-check-input" id="obavijest">
+                          </div>
+                        <div class="col">
+                          <lable class="form-check-label" for="obavijest"><b>Želim primati obavijesti</b></lable>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Odustani</button>
+                      <button type="button" class="btn btn-primary">Pošalji</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="content" id="novostiContent">
+            
+        <div id="novostiNaslov" class="nasloviStranica">
+            <h1>Novosti</h1>
+            <hr>
+        </div>
+
+        <div id="popisNovostiWrapper">
+            <div id="popisNovosti">
+                <a href="Novosti/novost01.html" class="newsBubbleLink" id="newsBubbleLink01">
+                    <div class="newsBubble" id="newsBubble01">
+                        <div class="newsBubbleContent">
+                            <p class="newsBubbleDate">28.08.2019</p>
+                            <p>Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje izvrsnosti na
+                                natjecanju WordSkills Kazan 2019.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="Novosti/novost02.html" class="newsBubbleLink" id="newsBubbleLink02">
+                    <div class="newsBubble" id="newsBubble02">
+                        <div class="newsBubbleContent">
+                            <p class="newsBubbleDate">22.07.2019</p>
+                            <p>Nagrađujemo izvrsnost: Objavljujemo dobitnike stipendijskog natječaja šk. gpd. 2018./2019.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="Novosti/novost03.html" class="newsBubbleLink" id="newsBubbleLink03">
+                    <div class="newsBubble" id="newsBubble03">
+                        <div class="newsBubbleContent">
+                            <p class="newsBubbleDate">18.04.2019.</p>
+                            <p>Digitalno junior ljeto</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+      <section>
+        <footer class="text-white text-center">
+          <h3>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</h3>
+          <div class="text-danger">
+            <h3>ZAISKRI</h3>
+        </footer>
+    </section>
+</body>

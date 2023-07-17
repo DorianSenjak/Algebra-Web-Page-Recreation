@@ -1,0 +1,405 @@
+a{
+    text-decoration: none;
+}
+
+i{
+    display: inline-block;
+    color: orange;
+    justify-content: center;
+    font-weight: normal;
+}
+h2 > i {
+    color:darkblue
+}
+.flaticon-arrow{
+    color:blue;
+}
+
+.nav-item > a:hover{
+    color: rgb(238, 255, 89);
+}
+
+.navbar {
+    height: 80px;
+    line-height: 80px;
+}
+
+#kontaktLink:hover{
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #fff;
+    background-size: cover;
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    margin-top: auto;
+    text-shadow: 0.5px 0.5px black;
+    background-image: url(../Resources/img/zaiskri-bg.jpg);
+    background-size:cover;
+}
+
+#novostiContent{
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#novostiNaslov{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#popisNovostiWrapper {
+    background-color: #FAF9FA;
+}
+
+#popisNovosti{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    /* background-color: yellow; */
+
+    display: grid;
+    animation: normal 1s zoomIn;
+}
+
+/*------------NEWS BUBBLES------------*/
+
+.newsBubble{
+    /* border: 20px solid white; */
+    border: 20px solid #FAF9FA;
+    border-radius: 100%;
+    box-shadow: 0 0 8px 5px #ccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsBubbleLink{
+    justify-self: center;
+}
+
+#newsBubble01{
+    background-image: url(../Resources/img/novost1.jpg);
+}
+
+#newsBubble02{
+    background-image: url(../Resources/img/novost2.jpg);
+}
+
+#newsBubble03{
+    background-image: url(../Resources/img/novost3.jpg);
+}
+
+.newsBubbleContent{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    color: white;
+}
+
+.newsBubbleDate{
+    color: yellow;
+}
+
+footer{
+    grid-row: 3/4;
+}
+
+
+/*-------------------------ANIMATIONS-------------------------*/
+@keyframes zoomIn {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+
+/*------------------------------------------------------------*/
+/*---------------------------1920px---------------------------*/
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 1920px) {
+    .main{
+        grid-template-rows: 80px 37vw 275px;
+    }
+
+    #novostiContent{
+        grid-template-rows: 119px 440px;
+    }
+
+    #popisNovostiWrapper {
+        margin-top: 3.75em;        
+    }
+    
+    #popisNovosti{
+        padding: 3em 15em 3em 15em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .newsBubble{
+        height: 16.5em;
+        width: 16.5em;
+    }
+
+    #newsBubbleLink01{
+        grid-column: 1/2;
+    }
+
+    #newsBubbleLink02{
+        grid-column: 2/3;
+    }
+
+    #newsBubbleLink03{
+        grid-column: 3/4;
+    }
+
+    .newsBubbleContent{
+        margin: 4.5em 1.75em 4.5em 1.75em;
+        line-height: 150%;
+    }
+
+    footer{
+        padding-top: 1.25em;
+    }
+
+}
+
+
+
+/*------------------------------------------------------------*/
+/*---------------------------1500px---------------------------*/
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 1500px) and (max-width: 1919.9px){
+
+    .main{
+        grid-template-rows: 80px 625px 275px;
+    }
+
+    #novostiContent{
+        grid-template-rows: 119px 440px;
+    }
+
+    #popisNovostiWrapper {
+        margin-top: 1.75em;        
+    }
+
+    #popisNovosti{
+        padding: 3em 4em 3em 4em;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .newsBubble{
+        height: 16.5em;
+        width: 16.5em;
+    }
+
+    #newsBubbleLink01{
+        grid-column: 1/2;
+    }
+
+    #newsBubbleLink02{
+        grid-column: 2/3;
+    }
+
+    #newsBubbleLink03{
+        grid-column: 3/4;
+    }
+
+    .newsBubbleContent{
+        margin: 4.5em 1.75em 4.5em 1.75em;
+        line-height: 150%;
+    }
+
+    footer{
+        padding-top: 1.25em;
+    }
+
+}
+
+
+
+/*------------------------------------------------------------*/
+/*---------------------------1200px---------------------------*/
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 1200px) and (max-width: 1499.9px){
+
+    .main{
+        grid-template-rows: 80px 600px 215px;
+    }
+
+    #novostiContent{
+        grid-template-rows: 119px 440px;
+    }
+
+    #popisNovostiWrapper {
+        margin-top: 1.75em;        
+    }
+
+    #popisNovosti{
+        padding: 3em 5em 3em 5em;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .newsBubble{
+        height: 16.5em;
+        width: 16.5em;
+    }
+
+    #newsBubbleLink01{
+        grid-column: 1/2;
+    }
+
+    #newsBubbleLink02{
+        grid-column: 2/3;
+    }
+
+    #newsBubbleLink03{
+        grid-column: 3/4;
+    }
+
+    .newsBubbleContent{
+        margin: 4.5em 1.75em 4.5em 1.75em;
+        line-height: 150%;
+    }
+
+    footer{
+        padding-top: 1.25em;
+    }
+}
+
+
+
+/*------------------------------------------------------------*/
+/*---------------------------768px---------------------------*/
+/*------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) and (max-width: 1199.9px){
+    .main{
+        grid-template-rows: 80px 455px 150px;
+    }
+
+    #novostiContent{
+        grid-template-rows: 90px 365px;
+    }
+
+    #popisNovostiWrapper {
+        margin-top: 1.75em;        
+    }
+
+    #popisNovosti{
+        padding: 3em 2em 3em 2em;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .newsBubble{
+        height: 10.5em;
+        width: 10.5em;
+    }
+
+    #newsBubbleLink01{
+        grid-column: 1/2;
+    }
+
+    #newsBubbleLink02{
+        grid-column: 2/3;
+    }
+
+    #newsBubbleLink03{
+        grid-column: 3/4;
+    }
+
+    .newsBubbleContent{
+        margin: 2em 1.1em 2em 1.1em;
+        line-height: 1.4em;
+        font-size: 0.8em;
+    }
+
+    footer{
+        padding-top: 1.25em;
+    }
+
+}
+
+
+
+/*------------------------------------------------------------*/
+/*-------------------------- < 768px -------------------------*/
+/*------------------------------------------------------------*/
+
+@media screen and (max-width: 767.9px) {
+
+    .main{
+        grid-template-rows: 80px 1fr 110px;
+    }
+
+    #novostiContent{
+        grid-template-rows: 90px 1fr;
+    }
+
+    #popisNovostiWrapper {
+        margin-top: 1.75em;        
+    }
+
+    #popisNovosti{
+        padding: 0 2em 3em 2em;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .newsBubble{
+        height: 10.5em;
+        width: 10.5em;
+        margin-top: 2em;
+    }
+
+    #newsBubbleLink01{
+        grid-row: 1/2;
+    }
+
+    #newsBubbleLink02{
+        grid-row: 2/3;
+    }
+
+    #newsBubbleLink03{
+        grid-row: 3/4;
+    }
+
+    .newsBubbleContent{
+        margin: 2em 1.1em 2em 1.1em;
+        line-height: 1.4em;
+        font-size: 0.8em;
+    }
+
+    footer{
+        padding-top: 1.25em;
+    }
+}

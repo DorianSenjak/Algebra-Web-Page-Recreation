@@ -114,6 +114,10 @@ footer{
     color:purple;
 }
 
+.flaticon-compass{
+    color:purple;
+}
+
 #oNamaTekst > p{
     margin-top: 3em;
     margin-bottom: 3em;
@@ -125,7 +129,6 @@ footer{
 .box{
     border: 2px solid #e1e1e1;
     border-radius: 5px;
-    max-width: 30%;
 }
 
 .box > h3{
@@ -139,21 +142,12 @@ footer{
 }
 
 .box > p{
-    display:block;
     padding-left: 1em;
     padding-right: 1em;
     min-height: 15em;
 }
 
 #oNamaBoxes{
-    justify-content: center;
-    margin-top: 5%;
-    gap: 0.5em;
-    margin-bottom: 5%;
-    
-}
-
-#AlgebraGrupaBoxes{
     display:inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -162,17 +156,30 @@ footer{
     margin-bottom: 5%;
 }
 
+#AlgebraGrupaBoxes{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 1em;
+    margin-bottom: 5%;
+}
+
 .smallBox{
-    max-width: 75%;
+    min-width: 20%;
+    margin-bottom:2%;
 }
 
 .smallBox > h3{
-    font-size: 125%;
+    font-size: 100%;
 }
 
 .resize{
-    height: auto;
-    max-width: 125px;
+    width:25%
+}
+
+.resizeSmall{
+    min-width: 40%;
 }
 
 #povijestBoxes{
@@ -184,9 +191,63 @@ footer{
     margin-bottom: 5%;
 }
 
+
 #povijestBoxes > .box > h3 > span{
     color: rgb(68, 72, 201);
 }
+
+
+
+#kakoDoNasContent{
+    background-image: url(../Resources/img/kakoDoNas.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    background-color: rgba(255, 255, 255, 0.493);
+    background-size: cover;
+}
+
+#kakoDoNasBoxes{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 2%;
+
+}
+
+.kakoDoNasBox{
+    font-size: large;
+    min-width: 40%;
+    border: 1px solid #c4c4c4;
+    background-color: #fdfdfd;
+    min-height: 30em;
+}
+
+.kakoDoNasSekcija > p {
+    margin-top:4%;
+    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.kakoDoNasSekcija > h3 {
+    font-weight: bolder;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.kakoDoNasSekcija > h3 > i{
+    color: dodgerblue;
+}
+
+.map{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
 
 @keyframes slideInFromTop {
     0% {
