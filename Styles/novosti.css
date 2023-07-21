@@ -39,53 +39,50 @@ footer{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    bottom:0;
     height: 300px;
-    margin-top: auto;
     text-shadow: 0.5px 0.5px black;
     background-image: url(../Resources/img/zaiskri-bg.jpg);
     background-size:cover;
 }
 
-#novostiContent{
-    grid-row: 2/3;
-
-    display: grid;
-    grid-template-columns: 1fr;
-}
 
 #novostiNaslov{
-    grid-row: 1/2;
-    grid-column: 1/2;
+    margin-top: 2%;
+
+    display:flex;
+    justify-content: center;
 }
 
-#popisNovostiWrapper {
-    background-color: #FAF9FA;
-}
 
 #popisNovosti{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    /* background-color: yellow; */
-
     display: grid;
     animation: normal 1s zoomIn;
 }
 
-/*------------NEWS BUBBLES------------*/
+.popisNovostiWrapper{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #FAF9FA;
+}
 
 .newsBubble{
-    /* border: 20px solid white; */
     border: 20px solid #FAF9FA;
     border-radius: 100%;
     box-shadow: 0 0 8px 5px #ccc;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
 
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+hr{
+    border: 0.5px solid #ffb700;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .newsBubbleLink{
@@ -117,12 +114,9 @@ footer{
     color: yellow;
 }
 
-footer{
-    grid-row: 3/4;
-}
 
 
-/*-------------------------ANIMATIONS-------------------------*/
+
 @keyframes zoomIn {
     from {
         transform: scale(0, 0);
@@ -133,9 +127,7 @@ footer{
 }
 
 
-/*------------------------------------------------------------*/
-/*---------------------------1920px---------------------------*/
-/*------------------------------------------------------------*/
+/*1920px*/
 
 @media screen and (min-width: 1920px) {
     .main{
@@ -146,9 +138,6 @@ footer{
         grid-template-rows: 119px 440px;
     }
 
-    #popisNovostiWrapper {
-        margin-top: 3.75em;        
-    }
     
     #popisNovosti{
         padding: 3em 15em 3em 15em;
@@ -178,17 +167,12 @@ footer{
         line-height: 150%;
     }
 
-    footer{
-        padding-top: 1.25em;
-    }
 
 }
 
 
 
-/*------------------------------------------------------------*/
-/*---------------------------1500px---------------------------*/
-/*------------------------------------------------------------*/
+/*1500px*/
 
 @media screen and (min-width: 1500px) and (max-width: 1919.9px){
 
@@ -198,10 +182,6 @@ footer{
 
     #novostiContent{
         grid-template-rows: 119px 440px;
-    }
-
-    #popisNovostiWrapper {
-        margin-top: 1.75em;        
     }
 
     #popisNovosti{
@@ -233,17 +213,12 @@ footer{
         line-height: 150%;
     }
 
-    footer{
-        padding-top: 1.25em;
-    }
 
 }
 
 
 
-/*------------------------------------------------------------*/
-/*---------------------------1200px---------------------------*/
-/*------------------------------------------------------------*/
+/*1200px*/
 
 @media screen and (min-width: 1200px) and (max-width: 1499.9px){
 
@@ -255,9 +230,6 @@ footer{
         grid-template-rows: 119px 440px;
     }
 
-    #popisNovostiWrapper {
-        margin-top: 1.75em;        
-    }
 
     #popisNovosti{
         padding: 3em 5em 3em 5em;
@@ -288,16 +260,11 @@ footer{
         line-height: 150%;
     }
 
-    footer{
-        padding-top: 1.25em;
-    }
 }
 
 
 
-/*------------------------------------------------------------*/
-/*---------------------------768px---------------------------*/
-/*------------------------------------------------------------*/
+/*768px*/
 
 @media screen and (min-width: 768px) and (max-width: 1199.9px){
     .main{
@@ -308,9 +275,6 @@ footer{
         grid-template-rows: 90px 365px;
     }
 
-    #popisNovostiWrapper {
-        margin-top: 1.75em;        
-    }
 
     #popisNovosti{
         padding: 3em 2em 3em 2em;
@@ -342,17 +306,12 @@ footer{
         font-size: 0.8em;
     }
 
-    footer{
-        padding-top: 1.25em;
-    }
 
 }
 
 
 
-/*------------------------------------------------------------*/
-/*-------------------------- < 768px -------------------------*/
-/*------------------------------------------------------------*/
+/*<768px*/
 
 @media screen and (max-width: 767.9px) {
 
@@ -362,10 +321,6 @@ footer{
 
     #novostiContent{
         grid-template-rows: 90px 1fr;
-    }
-
-    #popisNovostiWrapper {
-        margin-top: 1.75em;        
     }
 
     #popisNovosti{
@@ -399,7 +354,4 @@ footer{
         font-size: 0.8em;
     }
 
-    footer{
-        padding-top: 1.25em;
-    }
 }
