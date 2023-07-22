@@ -1,0 +1,88 @@
+a{
+    text-decoration: none;
+}
+
+i{
+    display: inline-block;
+    color: orange;
+    justify-content: center;
+    font-weight: normal;
+}
+h2 > i {
+    color:darkblue
+}
+.flaticon-arrow{
+    color:blue;
+}
+
+.nav-item > a:hover{
+    color: rgb(238, 255, 89);
+}
+
+.navbar {
+    height: 80px;
+    line-height: 80px;
+}
+
+#kontaktLink:hover{
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #fff;
+    background-size: cover;
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    margin-top: auto;
+    text-shadow: 0.5px 0.5px black;
+    background-image: url(../Resources/img/zaiskri-bg.jpg);
+    background-size:cover;
+}
+
+#novostiContent {
+    display:flex;
+    background-size: cover;
+    height: 250px;
+    background-image: url(../Resources/img/novost2.jpg);
+	animation: 0.75s ease-in 0s 1 slideInFromTop;
+    align-items: center;
+    justify-content: center;
+}
+
+#naslov > hr{
+    border: 0.5px solid #ffb700;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.novostTekst{
+    font-size: 150%;
+    line-height: 1.5em;    
+    margin: 1.5em 5em 2em 5em;
+}
+
+.novostSlika {
+    width: 35rem;
+}
+
+.novostVideo > video {
+    margin-top:1rem;
+    width: 30rem;
+}
+
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
