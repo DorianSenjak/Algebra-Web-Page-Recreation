@@ -1,0 +1,92 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #ffff;
+    background-size: cover;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+i{
+    display: inline-block;
+    color: orange;
+    justify-content: center;
+    font-weight: normal;
+}
+h2 > i {
+    color:darkblue
+}
+.flaticon-arrow{
+    color:blue;
+}
+
+.nav-item > a:hover{
+    color: rgb(238, 255, 89);
+}
+
+
+
+.navbar {
+    height: 80px;
+    line-height: 80px;
+}
+
+
+#kontaktLink:hover{
+    cursor: pointer;
+}
+
+
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    margin-top: auto;
+    text-shadow: 0.5px 0.5px black;
+    background-image: url(../Resources/img/zaiskri-bg.jpg);
+    background-size:cover;
+}
+
+
+
+#nastavniPlanNaslov{
+    margin-top: 2%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#nastavniPlanNaslov > hr {
+    border: 0.5px solid #ffb700;
+}
+
+#txtKolegij{
+    width: 25rem;
+}
+
+#kolegijKalkulator{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:25%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+
+#odabirKolegija{
+    animation: normal inputIntoScreenFromRight 1s;
+}
+
+
+@keyframes inputIntoScreenFromRight {
+    from {
+        transform: translateX(2000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

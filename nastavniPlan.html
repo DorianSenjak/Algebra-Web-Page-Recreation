@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +8,8 @@
     <title>SUPIT</title>
     <link rel="script" href="Scripts/jquery-1.11.3.min.js">
     <link rel="stylesheet" href = "bootstrap/bootstrap.css">
-    <link rel="stylesheet" href = "C:/Users/admin/node_modules/lightbox2/dist/css/lightbox.css">
     <link rel="stylesheet" type="text/css" href="Resources/Icons/font/flaticon.css">
-    <link rel="stylesheet" href="Styles/novosti03.css">
+    <link rel="stylesheet" href="Styles/nastavniPlan.css">
     <script src="Scripts/jquery-1.11.3.min.js"></script>
     <script src="bootstrap/bootstrap.js"></script>
 </head>
@@ -84,41 +82,58 @@
           </div>
         </nav>
       </header>
-    <div id="novostiContent">
-    <img class="img-fluid">
-    </div>
-    <br>
-    <div id="naslov" class="text-center">
-      <h1><b>Digitalno junior ljeto</b></h1>
-      <hr>
-    </div>
 
-    <div class="novostTekst">
-        <p>Algebra Junior organizira edukativne i zabavne ljetne
-            praznike za sve osnovnoškolce! I ove smo godine
-            pripremili digitalne radionice za djecu čiji je fokus
-            rješavanja raznih problema korištenjem tehnologije,
-            multimedije, digitalnog dizajna i komunikacija te
-            stvaranju sadržaja u svim multimedijskim i softverskim
-            oblicima. Radionice se održavaju u sklopu Digitalnog
-            ljetnog kampa u Crikvenici i Digitalne ljetne škole u
-            Zagrebu kako bismo se družili, zabavljali i učili i na
-            moru i na kontinentu! Na digitalnom kampu i u školi
-            provodit će se dva različita programa koji su
-            namijenjena djeci od 1. do 8. razreda. Ovisno o
-            odabranom terminu, polaznici će prolaziti kroz 1. ili 2.
-            program, a u slučaju pohađanja dvotjednih programa –
-            oba. U prvom programu nađe nindže uče biti glazbeni
-            menadžeri dok su u drugom novinari i kreatori
-            informacija masovnih medija. Provjerite termine, cijene
-            i lokacije škole i kampa na sljedećem linku.</p>
-    </div>
+      <section class="conten text-center" id="nastavniPlanContent">
+
+        <div id="nastavniPlanNaslov" class="text-center">
+            <h1>Nastavni plan</h1>
+            <hr>
+        </div>
+
+        <div id="kolegijKalkulator">
+            <div id="odabirKolegija">
+                <label for="txtKolegij" id="labelKolegij">Naziv kolegija:</label>
+                <input type="text" name="" id="txtKolegij">
+                <button id="addBtn">Dodaj</button>
+            </div>
+
+            <div id="tablicaKolegija">
+                <table class="table" id="kolegiji">
+                    <thead id="kolegijiHead">
+                        <tr scope="row" id="tableHead">
+                            <th scope="col" id="thKolegij">Kolegij</th>
+                            <th scope="col" id="thECTS">ECTS</th>
+                            <th scope="col" id="thSati">Sati</th>
+                            <th scope="col" id="thPredavanja">Predavanja</th>
+                            <th scope="col" id="thVjezbe">Vježbe</th>
+                            <th scope="col" id="thTip">Tip</th>
+                            <th scope="col" id="thObrisi"></th>
+                        </tr>
+                    </thead>
+
+                    <tr scope="row" id="tableFoot">
+                        <td>Ukupno:</td>
+                        <td id="ukupnoECTS" class="ukupnoBroj"></td>
+                        <td id="ukupnoSati" class="ukupnoBroj"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        
+    </section>
 
       <section>
         <footer class="text-white text-center">
           <h3>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</h3>
           <div class="text-danger">
             <h3>ZAISKRI</h3>
-        </footer>
+          </footer>
       </section>
 </body>
+</html>

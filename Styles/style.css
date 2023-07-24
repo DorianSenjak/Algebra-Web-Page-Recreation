@@ -10,10 +10,6 @@ body{
     background-size: cover;
 }
 
-.main{
-    width: 100%;
-    display: grid;
-}
 
 a{
     text-decoration: none;
