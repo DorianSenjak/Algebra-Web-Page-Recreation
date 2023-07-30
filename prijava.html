@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto+Condensed&display=swap" rel="stylesheet">
     <title>SUPIT</title>
-    <link rel="script" href="Scripts/jquery-1.11.3.min.js">
     <link rel="stylesheet" href = "bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Resources/Icons/font/flaticon.css">
-    <link rel="stylesheet" href="Styles/nastavniPlan.css">
-    <script src="Scripts/jquery-1.11.3.min.js"></script>
-    <script src="Scripts/nastavniPlan.js"></script>
+    <link rel="stylesheet" href="Styles/prijava.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap/bootstrap.js"></script>
 </head>
 <body>
@@ -83,52 +82,31 @@
           </div>
         </nav>
       </header>
+    <div id="prijava">
+        <form method="post" action="https://www.fulek.com/data/api/user/login">
+        <div class="text-center mb-5" id="prijavaNaslov">
+            <h2>Prijava korisnika</h2>
+         </div>
 
-      <section class="conten text-center" id="nastavniPlanContent">
-
-        <div id="nastavniPlanNaslov" class="text-center">
-            <h1>Nastavni plan</h1>
-            <hr>
+        <div class="mb-4 d-block" id="emailKorisnik">
+           <label class="form-label" for="username"><b>Korisničko ime</b></label>
+           <input type="email" id="username" class="form-control"/>
         </div>
-
-        <div id="kolegijKalkulator">
-            <div id="odabirKolegija">
-                <label for="txtKolegij" id="labelKolegij">Naziv kolegija:</label>
-                <input type="text" name="" id="txtKolegij">
-                <button id="addBtn">Dodaj</button>
-            </div>
-
-            <div id="tablicaKolegija">
-                <table class="table" id="kolegiji">
-                    <thead id="kolegijiHead">
-                        <tr scope="row" id="tableHead">
-                            <th scope="col" id="thKolegij">Kolegij</th>
-                            <th scope="col" id="thECTS">ECTS</th>
-                            <th scope="col" id="thSati">Sati</th>
-                            <th scope="col" id="thPredavanja">Predavanja</th>
-                            <th scope="col" id="thVjezbe">Vježbe</th>
-                            <th scope="col" id="thTip">Tip</th>
-                            <th scope="col" id="thObrisi"></th>
-                        </tr>
-                    </thead>
-
-                    <tr scope="row" id="tableFoot">
-                        <td>Ukupno:</td>
-                        <td id="ukupnoECTS" class="ukupnoBroj"></td>
-                        <td id="ukupnoSati" class="ukupnoBroj"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                </table>
-            </div>
-        </div>
-
         
-    </section>
+        <div class="mb-4 d-block" id="passwordKorisnik">
+            <label class="form-label" for="password"><b>Lozinka</b></label>
+            <input type="password" id="password" class="form-control"/>
+         </div>
 
+         <button type="button" class="btn btn-secondary mb-3" id="loginButton">Prijavi se</button>
+
+         <div id="errorMessage" class="alert text-danger mt-3" style="display: none"></div>
+
+         <h6>Nemas račun? <a href="registracija.html">Registriraj se</a></h6>
+        <script src="Scripts/script.js"></script>
+
+        </form>
+    </div>
       <section>
         <footer class="text-white text-center">
           <h3>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</h3>
@@ -137,4 +115,3 @@
           </footer>
       </section>
 </body>
-</html>

@@ -1,0 +1,76 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #ffff;
+    background-size: cover;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+i{
+    display: inline-block;
+    color: orange;
+    justify-content: center;
+    font-weight: normal;
+}
+h2 > i {
+    color:darkblue
+}
+.flaticon-arrow{
+    color:blue;
+}
+
+.nav-item > a:hover{
+    color: rgb(238, 255, 89);
+}
+
+
+
+.navbar {
+    height: 80px;
+    line-height: 80px;
+}
+
+
+#kontaktLink:hover{
+    cursor: pointer;
+}
+
+
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    margin-top: auto;
+    text-shadow: 0.5px 0.5px black;
+    background-image: url(../Resources/img/zaiskri-bg.jpg);
+    background-size:cover;
+}
+
+#prijava{
+    margin-top:5%;
+}
+
+#emailKorisnik{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#passwordKorisnik{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    max-width:450px;
+    margin:auto;
+}
+
