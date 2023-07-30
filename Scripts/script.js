@@ -1,28 +1,29 @@
-// script.js
-
-// Function to handle login form submission
 function loginUser() {
     const username = $('#username').val();
     const password = $('#password').val();
-    const loginUrl = 'https://www.fulek.com/data/api/user/login'; // Replace this with your login API endpoint
+    const loginUrl = 'https://www.fulek.com/data/api/user/login';
   
-    // Create a data object with the username and password
     const data = {
       username: username,
       password: password,
     };
   
-    // Make a POST request to the login API using jQuery
     $.ajax({
       url: loginUrl,
       type: 'POST',
       contentType: 'application/json',
-      data: data,
+      data: JSON.stringify(data),
       success: function (response) {
-        if (response.success) {
-          alert('Login successful!'); // You can redirect the user to the dashboard or homepage here
+        if (response.isSuccess) {
+        const user = data.username;
+
+        const expirationTime = new Date();
+        expirationTime.setTime(expirationTime.getTime() + 30 * 60 * 1000);
+
+        document.cookie = 'userName=${encodeURIComponent(user.name)}; expires=${expirationTime.toUTCString()}; path=/';
+        updateHeaderWithUser(user.name);
         } else {
-            $('#errorMessage').text('User not found').show(); // Display error message if login fails
+            $('#errorMessage').text('User not found').show();
         }
       },
       error: function (error) {
@@ -32,39 +33,37 @@ function loginUser() {
     });
   }
   
-  // Function to handle registration form submission
   function registerUser() {
     const username = $('#username').val();
     const password = $('#password').val();
-    const registerUrl = 'https://www.fulek.com/data/api/user/register'; // Replace this with your registration API endpoint
+    const registerUrl = 'https://www.fulek.com/data/api/user/register';
   
-    // Create a data object with the username and password
     const data = {
       username: username,
       password: password,
     };
   
-    // Make a POST request to the registration API using jQuery
     $.ajax({
       url: registerUrl,
       type: 'POST',
-      contentType: 'json',
+      contentType: 'application/json',
       data: JSON.stringify(data),
       success: function (response) {
-        if (response.success) {
-          alert('Registration successful!'); // You can redirect the user to the login page here
-        } else {
-          alert('Registration failed. Please try again later.'); // Display error message if registration fails
-        }
-      },
-      error: function (error) {
-        console.error('Error:', error);
-        alert('An error occurred during registration. Please try again later.');
+        if (response.isSuccess) {
+        
+      } else {
+        $('#errorMessage').text('Login failed. Please check your credentials and try again.').show();
+      }
       },
     });
   }
+
+  function updateHeaderWithUser(userName) {
+    $('#loggedInUser').text(userName);
   
-  // Add event listeners to the login and registration buttons
+    $('#loginButton').hide();
+    $('#loggedInUser').show();
+  }
+  
   $('#loginButton').on('click', loginUser);
   $('#registerButton').on('click', registerUser);
-  
