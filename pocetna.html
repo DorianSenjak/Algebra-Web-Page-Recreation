@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto+Condensed&display=swap" rel="stylesheet">
     <title>SUPIT</title>
-    <link rel="script" href="Scripts/jquery-1.11.3.min.js">
     <link rel="stylesheet" href = "bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Resources/Icons/font/flaticon.css">
     <link rel="stylesheet" href="Styles/style.css">
-    <script src="Scripts/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap/bootstrap.js"></script>
 </head>
 <body>
@@ -22,6 +21,7 @@
       <div class="navbar-collapse" id="navbarNav">
         <ul class="navbar-nav grid column-gap-5">
           <li class="nav-item" id="loginButton"><a class="nav-link" href="prijava.html"></i>Prijavi se</a></li>
+          <li class="nav-item" id="logoutButton" style="display: none;"><a class="nav-link" href="#" onclick="logoutUser()"></i>Odjava</a></li>
           <li class="nav-item"><a class="nav-link" href="pocetna.html"><i class="flaticon-home"></i> Početna</a></li>
           <li class="nav-item"><a class="nav-link" href="oNama.html"><i class="flaticon-chat"></i> O nama</a></li>
           <li class="nav-item"><a class="nav-link" href="novosti.html"><i class="flaticon-info"></i> Novosti</a></li>
@@ -75,6 +75,7 @@
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Odustani</button>
                   <button type="button" class="btn btn-primary">Pošalji</button>
                 </div>
+                <script src="Scripts/script.js"></script>
               </form>
             </div>
           </div>
@@ -103,6 +104,5 @@
       </footer>
   </section>
 </section>
-<script src="Scripts/script.js"></script>
 </body>
 </html>
