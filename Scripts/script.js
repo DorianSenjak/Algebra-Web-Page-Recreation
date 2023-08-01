@@ -15,13 +15,10 @@ function loginUser() {
       data: JSON.stringify(data),
       success: function (response) {
         if (response.isSuccess) {
-        const user = data.username;
-
-        const expirationTime = new Date();
-        expirationTime.setTime(expirationTime.getTime() + 30 * 60 * 1000);
-
-        document.cookie = 'userName=${encodeURIComponent(user.name)}; expires=${expirationTime.toUTCString()}; path=/';
-        updateHeaderWithUser(user.name);
+        localStorage.setItem('loggedInUser', JSON.stringify({ username: username }));
+        $('#loginButton').hide();
+        $('#logoutButton').show();
+        window.location.href="pocetna.html";
         } else {
             $('#errorMessage').text('User not found').show();
         }
@@ -50,7 +47,7 @@ function loginUser() {
       data: JSON.stringify(data),
       success: function (response) {
         if (response.isSuccess) {
-        
+        window.location.href="prijava.html";
       } else {
         $('#errorMessage').text('Login failed. Please check your credentials and try again.').show();
       }
@@ -58,12 +55,23 @@ function loginUser() {
     });
   }
 
-  function updateHeaderWithUser(userName) {
-    $('#loggedInUser').text(userName);
-  
-    $('#loginButton').hide();
-    $('#loggedInUser').show();
+  function logoutUser() {
+    localStorage.removeItem('loggedInUser');
+    $('#loginButton').show();
+    $('#logoutButton').hide();
+    $('#nastavniPlan').hide();
+    window.location.href="pocetna.html"
   }
-  
-  $('#loginButton').on('click', loginUser);
+
+  if(localStorage.getItem('loggedInUser')==null){
+    $('#loginButton').show();
+    $('#logoutButton').hide();
+  }
+  else{
+    $('#loginButton').hide();
+    $('#logoutButton').show();
+    $('#nastavniPlan').show();
+  }
+
+  $('#login_Button').on('click', loginUser);
   $('#registerButton').on('click', registerUser);

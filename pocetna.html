@@ -25,7 +25,7 @@
           <li class="nav-item"><a class="nav-link" href="pocetna.html"><i class="flaticon-home"></i> Početna</a></li>
           <li class="nav-item"><a class="nav-link" href="oNama.html"><i class="flaticon-chat"></i> O nama</a></li>
           <li class="nav-item"><a class="nav-link" href="novosti.html"><i class="flaticon-info"></i> Novosti</a></li>
-          <li class="nav-item"><a class="nav-link" href="nastavniPlan.html"><i class="flaticon-info"></i> Nastavni plan</a></li>
+          <li class="nav-item" id="nastavniPlan" style="display: none;"><a class="nav-link" href="nastavniPlan.html"><i class="flaticon-info"></i> Nastavni plan</a></li>
           <li class="nav-item" data-bs-target="modal"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal" id="kontaktLink"><i class="flaticon-mail"></i> Kontakt </a></li>
         </li>
         </ul>
@@ -38,42 +38,42 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
             </div>
             <div class="modal-body">
-              <form>
+              <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
                 <div>
-                  <label for="ime" class="form-label"><b>Ime i prezime</b></label>
-                  <input type="text" class="form-control" id="ime" placeholder="Unesite ime i prezime">
+                  <label for="FullName" class="form-label"><b>Ime i prezime</b></label>
+                  <input type="text" class="form-control" required name="FullName" placeholder="Unesite ime i prezime">
                 </div>
                 <div>
-                  <label for="email" class="form-label"><b>Email adresa</b></label>
-                  <input type="email" class="form-control" id="email" placeholder="Unesite email adresu">
+                  <label for="Email" class="form-label"><b>Email adresa</b></label>
+                  <input type="email" class="form-control" required name="Email" placeholder="Unesite email adresu">
                 </div>
                 <div>
-                  <label for="vaznostPoruke"><b>Važnost poruke</b></label>
-                  <select class="form-select">
+                  <label for="Importance"><b>Važnost poruke</b></label>
+                  <select class="form-select" required name="Importance">
                     <option>Niska</option>
                     <option>Srednja</option>
                     <option>Visoka</option>
                   </select>
                 </div>                
                 <div>
-                  <label for="poruka" class="form-label"><b>Poruka</b></label>
-                  <textarea class="form-control" id="poruka" rows="3" placeholder="Unesite poruku"></textarea>
+                  <label for="Message" class="form-label"><b>Poruka</b></label>
+                  <textarea class="form-control" required name="Message" rows="3" placeholder="Unesite poruku"></textarea>
                 </div>
                 <div class="form-check form-switch">
                   <div class="container text-center">
                     <div class="row row-cols-auto align-items-center">
                       <div class="col">
-                        <input type="checkbox" class="form-check-input" id="obavijest">
+                        <input type="checkbox" class="form-check-input form-control" id="Recievenewsletter" name="ReceiveNewsletter">
                       </div>
                     <div class="col">
-                      <lable class="form-check-label" for="obavijest"><b>Želim primati obavijesti</b></lable>
+                      <lable class="form-check-label" for="Recievenewsletter"><b>Želim primati obavijesti</b></lable>
                     </div>
                   </div>
                 </div>
               </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Odustani</button>
-                  <button type="button" class="btn btn-primary">Pošalji</button>
+                  <button type="button reset" class="btn btn-danger" data-bs-dismiss="modal">Odustani</button>
+                  <button type="button submit" class="btn btn-primary">Pošalji</button>
                 </div>
                 <script src="Scripts/script.js"></script>
               </form>
