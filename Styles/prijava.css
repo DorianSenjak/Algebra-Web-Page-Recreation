@@ -51,7 +51,6 @@ nav{
 
 
 
-
 footer{
     display:flex;
     flex-direction: column;
@@ -86,10 +85,16 @@ footer{
     margin:auto;
 }
 
-#prijava { animation: fadeIn 1s; }
+#registracijaForm{
+    max-width:450px;
+    margin:auto;
+}
+
+#prijava {
+    animation: fadeIn 1s;
+}
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-  

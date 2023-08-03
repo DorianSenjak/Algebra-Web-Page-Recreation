@@ -15,7 +15,9 @@ function loginUser() {
       data: JSON.stringify(data),
       success: function (response) {
         if (response.isSuccess) {
-        localStorage.setItem('loggedInUser', JSON.stringify({ username: username }));
+        console.log(response);
+        const token = response.data.token;
+        localStorage.setItem('loggedInUser', JSON.stringify({ username: username, token: token }));
         $('#loginButton').hide();
         $('#logoutButton').show();
         window.location.href="pocetna.html";

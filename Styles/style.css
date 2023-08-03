@@ -40,6 +40,7 @@ nav{
     background-color: black;
 }
 
+
 #kontaktLink{
     color:rgb(228, 228, 81);
 }
@@ -49,6 +50,9 @@ nav{
     color: rgb(255, 217, 0);
 }
 
+.nav-item{
+    max-width: 200px;
+}
 
 footer{
     display:flex;
@@ -80,36 +84,29 @@ video {
 
 .overlay {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.typewriter h1{
-    overflow: hidden;
-    border-right: .15em white;
-    white-space: nowrap;
-    margin:0 auto;
-    animation: 
-    typing 5s steps(40, end),
-    blink-caret .75s step-end infinite;
+#textVideo > .text-white {
+    -webkit-animation: 2s fadein;
+    animation: 2s fadein;
 }
 
-
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 26% }
+#textVideo > .text-danger {
+    -webkit-animation: 4s fadein;
+    animation: 4s fadein;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
