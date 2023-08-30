@@ -9,7 +9,9 @@
     <link rel="stylesheet" href = "bootstrap/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Resources/Icons/font/flaticon.css">
     <link rel="stylesheet" href="Styles/nastavniPlan.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="Styles/jquery-ui.css">
     <script src="bootstrap/bootstrap.js"></script>
 </head>
 <body>
@@ -84,48 +86,51 @@
     </nav>
   </header>
 
-      <section class="conten text-center" id="nastavniPlanContent">
-
-        <div id="nastavniPlanNaslov" class="text-center">
-            <h1>Nastavni plan</h1>
-            <hr>
-        </div>
-
-        <div id="kolegijKalkulator">
+  <div class="text-center" id="nastavniPlanNaslov">
+    <h1>Nastavni plan</h1>
+    <hr>
+  </div>
+<div>
+    <div id="kolegijKalkulator">
+        <div>
             <div id="odabirKolegija">
-                <label for="txtKolegij" id="labelKolegij">Naziv kolegija:</label>
-                <input type="text" name="" id="txtKolegij">
-                <button id="addBtn">Dodaj</button>
+                <label for="curriculumName">Naziv kolegija: </label>
+                <input type="text" class="form-control" id="curriculumName">
             </div>
-
-            <div id="tablicaKolegija">
-                <table class="table" id="kolegiji">
-                    <thead id="kolegijiHead">
-                        <tr scope="row" id="tableHead">
-                            <th scope="col" id="thKolegij">Kolegij</th>
-                            <th scope="col" id="thECTS">ECTS</th>
-                            <th scope="col" id="thSati">Sati</th>
-                            <th scope="col" id="thPredavanja">Predavanja</th>
-                            <th scope="col" id="thVjezbe">Vježbe</th>
-                            <th scope="col" id="thTip">Tip</th>
-                            <th scope="col" id="thObrisi"></th>
-                        </tr>
-                    </thead>
-
-                    <tr scope="row" id="tableFoot">
-                        <td>Ukupno:</td>
-                        <td id="ukupnoECTS" class="ukupnoBroj"></td>
-                        <td id="ukupnoSati" class="ukupnoBroj"></td>
-                        <td></td>
-                        <td></td>
+        </div>
+        <div class="tablicaKolegija">
+            <table class="table" id="table-body">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Kolegij</th>
+                    <th scope="col">ECTS</th>
+                    <th scope="col">Sati</th>
+                    <th scope="col">Predavanja</th>
+                    <th scope="col">Vježbe</th>
+                    <th scope="col">Tip</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                    <!--jQuery UI inputs-->
+                </tbody>
+                <tfoot>
+                    <tr class="table-dark">
+                        <!-- updated with jQuery -->
+                        <th scope="row">Total</th>
+                        <td id="totalECTS"></td>
+                        <td id="totalHours"></td>
+                        <td id="totalLectures"></td>
+                        <td id="totalExercises"></td>
                         <td></td>
                         <td></td>
                     </tr>
-
-                </table>
-            </div>
+                </tfoot>
+            </table>
         </div>
-        <script src="Scripts/nastavniPlan.js"></script>      
+    </div>
+</div>
+        <script src="Scripts/script.js"></script>      
     </section>
 
       <section>

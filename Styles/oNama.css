@@ -76,25 +76,24 @@ footer{
     100% { right: 0; }
 }
 
-
-
-@media screen and (max-width:4000px){
-    #oNamaTabs {
-        position: absolute;
-        right: -100%;
-        gap:1rem;
-        animation: slideRight 0.5s forwards;
-        animation-delay: 1s;
-        line-height: 0px;
-    }
+#oNamaTabs {
+    position: absolute;
+    right: -100%;
+    gap:1rem;
+    animation: slideRight 0.5s forwards;
+    animation-delay: 1s;
+    line-height: 0px;
 }
+
 
 @media screen and (max-width:1200px) {
     #oNamaTabs {
+        z-index:1;
         position: absolute;
         display:inline-block;
         margin-block: 1rem;
-        top:0;
+        background-color: black;
+        top:-3%;
         right:1%;
         animation: none;
         line-height: 0px;

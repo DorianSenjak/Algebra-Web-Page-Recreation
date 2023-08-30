@@ -130,6 +130,21 @@ hr{
 }
 
 
+.newsBubble{
+    height: 16.5em;
+    width: 16.5em;
+}
+
+#popisNovosti{
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 20%;
+    margin-bottom: 5%;
+}
 
 
 @keyframes zoomIn {
@@ -139,234 +154,4 @@ hr{
     to {
         transform: scale(1, 1);
     }
-}
-
-
-/*1920px*/
-
-@media screen and (min-width: 1920px) {
-    .main{
-        grid-template-rows: 80px 37vw 275px;
-    }
-
-    #novostiContent{
-        grid-template-rows: 119px 440px;
-    }
-
-    
-    #popisNovosti{
-        padding: 3em 15em 3em 15em;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .newsBubble{
-        height: 16.5em;
-        width: 16.5em;
-    }
-
-    #newsBubbleLink01{
-        grid-column: 1/2;
-    }
-
-    #newsBubbleLink02{
-        grid-column: 2/3;
-    }
-
-    #newsBubbleLink03{
-        grid-column: 3/4;
-    }
-
-    .newsBubbleContent{
-        margin: 4.5em 1.75em 4.5em 1.75em;
-        line-height: 150%;
-    }
-
-
-}
-
-
-
-/*1500px*/
-
-@media screen and (min-width: 1500px) and (max-width: 1919.9px){
-
-    .main{
-        grid-template-rows: 80px 625px 275px;
-    }
-
-    #novostiContent{
-        grid-template-rows: 119px 440px;
-    }
-
-    #popisNovosti{
-        padding: 3em 4em 3em 4em;
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .newsBubble{
-        height: 16.5em;
-        width: 16.5em;
-    }
-
-    #newsBubbleLink01{
-        grid-column: 1/2;
-    }
-
-    #newsBubbleLink02{
-        grid-column: 2/3;
-    }
-
-    #newsBubbleLink03{
-        grid-column: 3/4;
-    }
-
-    .newsBubbleContent{
-        margin: 4.5em 1.75em 4.5em 1.75em;
-        line-height: 150%;
-    }
-
-
-}
-
-
-
-/*1200px*/
-
-@media screen and (min-width: 1200px) and (max-width: 1499.9px){
-
-    .main{
-        grid-template-rows: 80px 600px 215px;
-    }
-
-    #novostiContent{
-        grid-template-rows: 119px 440px;
-    }
-
-
-    #popisNovosti{
-        padding: 3em 5em 3em 5em;
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .newsBubble{
-        height: 16.5em;
-        width: 16.5em;
-    }
-
-    #newsBubbleLink01{
-        grid-column: 1/2;
-    }
-
-    #newsBubbleLink02{
-        grid-column: 2/3;
-    }
-
-    #newsBubbleLink03{
-        grid-column: 3/4;
-    }
-
-    .newsBubbleContent{
-        margin: 4.5em 1.75em 4.5em 1.75em;
-        line-height: 150%;
-    }
-
-}
-
-
-
-/*768px*/
-
-@media screen and (min-width: 768px) and (max-width: 1199.9px){
-    .main{
-        grid-template-rows: 80px 455px 150px;
-    }
-
-    #novostiContent{
-        grid-template-rows: 90px 365px;
-    }
-
-
-    #popisNovosti{
-        padding: 3em 2em 3em 2em;
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .newsBubble{
-        height: 10.5em;
-        width: 10.5em;
-    }
-
-    #newsBubbleLink01{
-        grid-column: 1/2;
-    }
-
-    #newsBubbleLink02{
-        grid-column: 2/3;
-    }
-
-    #newsBubbleLink03{
-        grid-column: 3/4;
-    }
-
-    .newsBubbleContent{
-        margin: 2em 1.1em 2em 1.1em;
-        line-height: 1.4em;
-        font-size: 0.8em;
-    }
-
-
-}
-
-
-
-/*<768px*/
-
-@media screen and (max-width: 767.9px) {
-
-    .main{
-        grid-template-rows: 80px 1fr 110px;
-    }
-
-    #novostiContent{
-        grid-template-rows: 90px 1fr;
-    }
-
-    #popisNovosti{
-        padding: 0 2em 3em 2em;
-
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    .newsBubble{
-        height: 10.5em;
-        width: 10.5em;
-        margin-top: 2em;
-    }
-
-    #newsBubbleLink01{
-        grid-row: 1/2;
-    }
-
-    #newsBubbleLink02{
-        grid-row: 2/3;
-    }
-
-    #newsBubbleLink03{
-        grid-row: 3/4;
-    }
-
-    .newsBubbleContent{
-        margin: 2em 1.1em 2em 1.1em;
-        line-height: 1.4em;
-        font-size: 0.8em;
-    }
-
 }
