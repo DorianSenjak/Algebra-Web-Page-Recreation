@@ -33,7 +33,7 @@ h2 > i {
 
 .navbar {
     height: 80px;
-    line-height: 80px;
+    line-height: 50px;
 }
 
 nav{
@@ -63,7 +63,9 @@ footer{
     background-size:cover;
 }
 
-
+.nav-item{
+    background-color: black;
+}
 
 #nastavniPlanNaslov{
     margin-top: 2%;
