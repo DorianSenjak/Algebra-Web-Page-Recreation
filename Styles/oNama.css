@@ -20,7 +20,7 @@ h2 > i {
 }
 
 .nav-link{
-    color:rgb(228, 228, 81)
+    color:rgb(228, 228, 81);
 }
 
 .navbar {
@@ -95,26 +95,31 @@ footer{
         background-color: none;
         top:-3%;
         right:1%;
+        gap:0%;
         animation: none;
         line-height: 0px;
+        background-color: none;
     }
 
     #oNamaTabs > .nav-item{
         margin-bottom:2rem;
+        background-color: transparent;
     }
 
     #oNamaTabs > .nav-link{
         background-color: none;
     }
-}
 
-.nav-item{
-    background-color: black;
+
 }
 
 .nav-link{
     line-height: 50px;
     max-width: 150px;
+}
+
+.nav-item{
+    background-color: black;
 }
 
 #oNamaContent {
